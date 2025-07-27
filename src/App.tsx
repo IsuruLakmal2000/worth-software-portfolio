@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import './App.css'
 import Header from './components/Header.tsx'
 import About from './components/About.tsx'
+import ProductLifecycle from './components/ProductLifecycle.tsx'
 import Services from './components/Services.tsx'
 import Portfolio from './components/Portfolio.tsx'
 import Testimonials from './components/Testimonials.tsx'
@@ -33,6 +34,7 @@ function App() {
     <div className="App">
       <Header />
       <About />
+      <ProductLifecycle />
       <Services />
       <Portfolio />
       <Testimonials />
