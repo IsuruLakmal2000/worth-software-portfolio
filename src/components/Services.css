@@ -1,38 +1,95 @@
+/* Services grid specific styles */
+
 .services-header {
-  text-align: center;
-  margin-bottom: var(--spacing-4xl);
+  background-color: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-row: 1;
+  grid-column: 1;
+  min-height: 200px;
+}
+
+.services-header h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-black);
 }
 
 .services-subtitle {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   color: var(--gray-text);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-button {
+  background-color: var(--primary-black);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  background-color: var(--gray-text);
+  transform: translateY(-2px);
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-2xl);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+  height: auto;
+  min-height: 400px;
 }
 
 .service-card {
   background-color: var(--white);
-  padding: var(--spacing-2xl);
-  border-radius: var(--border-radius);
-  text-align: center;
-  box-shadow: var(--box-shadow);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.service-card.featured {
+  background-color: var(--primary-black);
+  color: white;
+}
+
+.service-card.featured .service-title,
+.service-card.featured .service-description {
+  color: white;
+}
+
+.service-card.featured .read-more-btn {
+  background-color: white;
+  color: var(--primary-black);
+}
+
+.service-card.featured .read-more-btn:hover {
+  background-color: #f0f0f0;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: var(--spacing-lg);
   display: block;
 }
@@ -42,21 +99,82 @@
   font-weight: 600;
   color: var(--primary-black);
   margin-bottom: var(--spacing-md);
+  text-transform: capitalize;
 }
 
 .service-description {
   color: var(--gray-text);
   line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-md);
+  flex-grow: 1;
 }
 
-/* Mobile Responsive */
+.read-more-btn {
+  background-color: transparent;
+  color: var(--primary-black);
+  border: 1px solid var(--primary-black);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.read-more-btn:hover {
+  background-color: var(--primary-black);
+  color: white;
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: var(--spacing-lg);
+  }
+  
+  .services-header {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+}
+
+/* Mobile Layout */
 @media (max-width: 768px) {
+  .services-header h2 {
+    font-size: 1.8rem;
+  }
+  
   .services-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    min-height: auto;
     gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+  }
+
+  .services-header {
+    grid-column: 1;
+    grid-row: 1;
+    padding: var(--spacing-lg);
   }
 
   .service-card {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
+  }
+
+  .service-icon {
+    font-size: 2rem;
+  }
+
+  .service-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .service-description {
+    font-size: var(--font-size-sm);
   }
 }

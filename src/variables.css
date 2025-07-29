@@ -157,6 +157,26 @@ body {
   background-color: var(--light-gray);
 }
 
+/* Ensure consistent container spacing */
+.container {
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  box-sizing: border-box;
+}
+
+/* Mobile container adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
 /* Typography */
 .heading-primary {
   font-size: var(--font-size-4xl);

@@ -18,7 +18,7 @@ const Testimonials: React.FC = () => {
       name: 'Sarah Johnson',
       role: 'CEO',
       company: 'TechCorp Solutions',
-      quote: 'WorthSoftware transformed our business with their innovative approach. Their team delivered beyond our expectations and helped us achieve remarkable growth.',
+      quote: 'WorthSoftware delivered an exceptional mobile app that transformed our customer engagement. Their attention to detail and innovative approach exceeded our expectations.',
       image: placeholderImg
     },
     {
@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
       name: 'Michael Chen',
       role: 'CTO',
       company: 'DataFlow Systems',
-      quote: 'The technical expertise and professionalism of WorthSoftware is unmatched. They delivered a complex project on time and within budget.',
+      quote: 'The AI automation solutions provided by WorthSoftware streamlined our operations significantly. Professional team with outstanding technical expertise.',
       image: placeholderImg
     },
     {
@@ -34,7 +34,31 @@ const Testimonials: React.FC = () => {
       name: 'Emily Rodriguez',
       role: 'Operations Director',
       company: 'Global Logistics Inc',
-      quote: 'Working with WorthSoftware was a game-changer for our operations. Their solutions streamlined our processes and improved efficiency dramatically.',
+      quote: 'Their POS system revolutionized our retail operations. Excellent support and maintenance services keep everything running smoothly.',
+      image: placeholderImg
+    },
+    {
+      id: 4,
+      name: 'David Kim',
+      role: 'Founder',
+      company: 'StartupHub',
+      quote: 'Outstanding web development services. They created a beautiful, responsive website that perfectly represents our brand and drives conversions.',
+      image: placeholderImg
+    },
+    {
+      id: 5,
+      name: 'Lisa Thompson',
+      role: 'Marketing Director',
+      company: 'Digital Solutions Co',
+      quote: 'The web application they built for us is fast, intuitive, and exactly what we needed. Great communication throughout the project.',
+      image: placeholderImg
+    },
+    {
+      id: 6,
+      name: 'James Wilson',
+      role: 'Store Manager',
+      company: 'Retail Plus',
+      quote: 'Their POS system made our daily operations so much easier. The training and ongoing support have been exceptional.',
       image: placeholderImg
     }
   ]
@@ -43,28 +67,21 @@ const Testimonials: React.FC = () => {
     <section id="testimonials" className="section section-alt">
       <div className="container">
         <div className="testimonials-header fade-in text-center">
-          <h2 className="heading-secondary">What Our Clients Say</h2>
-          <p className="testimonials-subtitle">
-            Don't just take our word for it - hear from the businesses we've helped succeed
-          </p>
+          <p className="testimonials-subtitle-small">Rating & Reviews</p>
+          <h2 className="heading-primary">Trusted by people</h2>
         </div>
         
-        <div className="testimonials-grid fade-in">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card">
+        <div className="testimonials-cards-container fade-in">
+          {testimonials.map((testimonial, index) => (
+            <div key={testimonial.id} className={`testimonial-card testimonial-card-${index + 1}`}>
+              <div className="testimonial-stars">
+                {'★★★★★'}
+              </div>
               <div className="testimonial-quote">
-                <span className="quote-mark">"</span>
                 <p>{testimonial.quote}</p>
               </div>
               <div className="testimonial-author">
-                <div className="author-image">
-                  <img src={testimonial.image} alt={testimonial.name} />
-                </div>
-                <div className="author-info">
-                  <h4 className="author-name">{testimonial.name}</h4>
-                  <p className="author-role">{testimonial.role}</p>
-                  <p className="author-company">{testimonial.company}</p>
-                </div>
+                <p className="author-name">{testimonial.name}</p>
               </div>
             </div>
           ))}

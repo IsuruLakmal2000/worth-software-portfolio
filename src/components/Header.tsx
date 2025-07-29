@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
-import placeholderImg from '../assets/placeholder.png'
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -12,22 +11,6 @@ const Header: React.FC = () => {
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' }
-  ]
-
-  // Professional avatar data with dynamic positioning
-  const avatars = [
-    { id: 1, name: 'CEO', image: placeholderImg, size: 'large', position: 'top-left' },
-    { id: 2, name: 'CTO', image: placeholderImg, size: 'medium', position: 'top-center' },
-    { id: 3, name: 'Designer', image: placeholderImg, size: 'small', position: 'top-right' },
-    { id: 4, name: 'Developer', image: placeholderImg, size: 'medium', position: 'middle-left' },
-    { id: 5, name: 'Manager', image: placeholderImg, size: 'small', position: 'middle-center' },
-    { id: 6, name: 'Analyst', image: placeholderImg, size: 'large', position: 'middle-right' },
-    { id: 7, name: 'Consultant', image: placeholderImg, size: 'medium', position: 'bottom-left' },
-    { id: 8, name: 'Director', image: placeholderImg, size: 'small', position: 'bottom-center' },
-    { id: 9, name: 'Lead', image: placeholderImg, size: 'medium', position: 'bottom-right' },
-    { id: 10, name: 'Specialist', image: placeholderImg, size: 'small', position: 'floating-1' },
-    { id: 11, name: 'Expert', image: placeholderImg, size: 'small', position: 'floating-2' },
-    { id: 12, name: 'Advisor', image: placeholderImg, size: 'medium', position: 'floating-3' }
   ]
 
   useEffect(() => {
@@ -90,31 +73,17 @@ const Header: React.FC = () => {
       <div className="hero-content">
         <div className="container">
           <div className="hero-inner fade-in">
-            <div className="avatars-container">
-              {avatars.map((avatar) => (
-                <div 
-                  key={avatar.id} 
-                  className={`avatar-card ${avatar.size} ${avatar.position}`}
-                >
-                  <img src={avatar.image} alt={avatar.name} />
-                </div>
-              ))}
-            </div>
-            
             <div className="hero-text-content">
-              <p className="hero-subtitle">Testimonials</p>
+              <p className="hero-subtitle">Welcome to WorthSoftware</p>
               <h1 className="hero-main-title">
-                We Elevate Your Business to <span className="highlight">Extraordinary Heights</span>
+                Building <span className="highlight">innovative solutions</span> for your business
               </h1>
               <p className="hero-description">
-                Discover how industry leaders trust WorthSoftware to transform their vision into powerful digital solutions that drive unprecedented growth.
+                We create cutting-edge software solutions that drive growth and transform your digital presence.
               </p>
               <div className="hero-actions">
-                <a href="#testimonials" className="btn btn-primary hero-cta">
-                  Read Success Stories →
-                </a>
-                <a href="#portfolio" className="btn btn-secondary hero-cta-secondary">
-                  View Our Work
+                <a href="#contact" className="btn btn-primary hero-cta">
+                  Get Started →
                 </a>
               </div>
             </div>

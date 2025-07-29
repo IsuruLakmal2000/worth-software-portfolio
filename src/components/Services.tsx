@@ -4,43 +4,55 @@ import './Services.css'
 const Services: React.FC = () => {
   const services = [
     {
-      title: 'Software Development',
-      icon: '💻',
-      description: 'Custom software solutions tailored to your business needs, from web applications to enterprise systems.'
+      title: 'Web Design and Development',
+      icon: '🌐',
+      description: 'Custom web solutions including responsive websites, web applications, and e-commerce platforms built with modern technologies.',
+      featured: true
     },
     {
-      title: 'UI/UX Design',
-      icon: '🎨',
-      description: 'Beautiful, intuitive user interfaces and experiences that engage your customers and drive conversions.'
+      title: 'Mobile Application Development',
+      icon: '📱',
+      description: 'Native and cross-platform mobile apps for iOS and Android that deliver exceptional user experiences and functionality.',
+      featured: false
     },
     {
-      title: 'Outsourced HR',
-      icon: '👥',
-      description: 'Comprehensive HR solutions including recruitment, onboarding, and employee management services.'
+      title: 'AI Automations',
+      icon: '🤖',
+      description: 'Intelligent automation solutions using artificial intelligence to streamline business processes and increase efficiency.',
+      featured: false
     },
     {
-      title: 'Tech Consulting',
-      icon: '🚀',
-      description: 'Strategic technology consulting to help you make informed decisions and accelerate digital transformation.'
+      title: 'POS/ERP Systems',
+      icon: '💼',
+      description: 'Comprehensive point-of-sale and enterprise resource planning systems to manage your business operations effectively.',
+      featured: false
+    },
+    {
+      title: 'Maintenance & Support',
+      icon: '🔧',
+      description: 'Ongoing technical support, system maintenance, and updates to keep your applications running smoothly and efficiently.',
+      featured: false
     }
   ]
 
   return (
     <section id="services" className="section section-alt">
       <div className="container">
-        <div className="services-header fade-in text-center">
-          <h2 className="heading-secondary">What We Do</h2>
-          <p className="services-subtitle">
-            We provide comprehensive technology solutions to help your business thrive in the digital age
-          </p>
-        </div>
-        
         <div className="services-grid fade-in">
+          <div className="services-header">
+            <h2 className="heading-secondary">Our Services</h2>
+            <p className="services-subtitle">
+              We offer comprehensive technology solutions to help your business grow and succeed in the digital world.
+            </p>
+            <button className="cta-button">Let's talk</button>
+          </div>
+          
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className={`service-card ${service.featured ? 'featured' : ''}`}>
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
+              <button className="read-more-btn">Read more</button>
             </div>
           ))}
         </div>
