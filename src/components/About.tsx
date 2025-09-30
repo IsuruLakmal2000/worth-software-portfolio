@@ -16,7 +16,7 @@ const About: React.FC = () => {
     },
     {
       title: 'Client-First',
-      description: 'Every decision we make is focused on delivering value to our clients.',
+      description: 'Every decision we make is focused on delivering value to our clients .',
       backgroundImage: placeholderImg
     }
   ]
