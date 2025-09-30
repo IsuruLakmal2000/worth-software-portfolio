@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 
           <div className="nav-actions">
             <a href="#contact" className="btn btn-primary nav-cta">
-              Get Started
+              Get Ready
             </a>
           </div>
 
