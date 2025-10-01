@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 
           <div className="nav-actions">
             <a href="#contact" className="btn btn-primary nav-cta">
-              Get Ready
+              Contact
             </a>
           </div>
 
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               </p>
               <div className="hero-actions">
                 <a href="#contact" className="btn btn-primary hero-cta">
-                  Get Started →
+                  Contact →
                 </a>
               </div>
             </div>

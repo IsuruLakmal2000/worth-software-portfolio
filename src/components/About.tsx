@@ -1,23 +1,25 @@
 import React from 'react'
 import './About.css'
-import placeholderImg from '../assets/placeholder.png'
+import trustImg from '../assets/trust.jpg'
+import innovationImg from '../assets/innovation1.jpg'
+import clientsImg from '../assets/clients-first.jpg'
 
 const About: React.FC = () => {
   const values = [
     {
       title: 'Reliability',
       description: 'We deliver consistent, dependable solutions that our clients can count on.',
-      backgroundImage: placeholderImg
+      backgroundImage: trustImg
     },
     {
       title: 'Innovation',
       description: 'We stay at the forefront of technology to bring cutting-edge solutions.',
-      backgroundImage: placeholderImg
+      backgroundImage: innovationImg
     },
     {
       title: 'Client-First',
       description: 'Every decision we make is focused on delivering value to our clients .',
-      backgroundImage: placeholderImg
+      backgroundImage: clientsImg
     }
   ]
 
