@@ -83,8 +83,8 @@ const ProductLifecycle: React.FC<ProductLifecycleProps> = () => {
   const stats = [
     { number: "99%", label: "Project Success Rate" },
     { number: "24/7", label: "Support Available" },
-    { number: "500+", label: "Products Launched" },
-    { number: "50+", label: "Happy Clients" }
+    { number: "10+", label: "Products Launched" },
+    { number: "10+", label: "Happy Clients" }
   ];
 
   return (

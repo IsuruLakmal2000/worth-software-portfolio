@@ -1,57 +1,48 @@
 import React from 'react'
 import './Portfolio.css'
-import placeholderImg from '../assets/placeholder.png'
+import restauranatImg from '../assets/portfolio/hungrypuppet.PNG'
+import outsourceImg from '../assets/portfolio/talentphere.PNG'
+import vehicleRentingImg from '../assets/portfolio/southroadtrips.PNG'
 
 const Portfolio: React.FC = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Modern shopping platform with advanced features',
-      image: placeholderImg
+      title: 'Restaurant Management System',
+      description: 'Restaurant Management System with advanced features',
+      image: restauranatImg
     },
     {
       id: 2,
-      title: 'Healthcare Management System',
-      description: 'Comprehensive patient and clinic management solution',
-      image: placeholderImg
+      title: 'Talents Outsource Platform',
+      description: 'Comprehensive talent and client management solution',
+      image: outsourceImg
     },
     {
       id: 3,
-      title: 'Financial Dashboard',
-      description: 'Real-time analytics and reporting dashboard',
-      image: placeholderImg
+      title: 'Vehicle Renting Website',
+      description: 'System with features to manage rentings and tours',
+      image: vehicleRentingImg
     },
     {
       id: 4,
       title: 'Learning Management System',
       description: 'Interactive online education platform',
-      image: placeholderImg
+      image: restauranatImg
     },
     {
       id: 5,
       title: 'Project Management Tool',
       description: 'Collaborative workspace for team productivity',
-      image: placeholderImg
+      image: restauranatImg
     },
     {
       id: 6,
       title: 'Restaurant POS System',
       description: 'Complete point-of-sale solution for restaurants',
-      image: placeholderImg
-    },
-    {
-      id: 7,
-      title: 'Real Estate Portal',
-      description: 'Property listing and management platform',
-      image: placeholderImg
-    },
-    {
-      id: 8,
-      title: 'Inventory Management',
-      description: 'Smart warehouse and inventory tracking system',
-      image: placeholderImg
+      image: restauranatImg
     }
+    
   ]
 
   return (

@@ -28,9 +28,9 @@ const Services: React.FC = () => {
       featured: false
     },
     {
-      title: 'Maintenance & Support',
-      icon: '🔧',
-      description: 'Ongoing technical support, system maintenance, and updates to keep your applications running smoothly and efficiently.',
+      title: 'Desktop Application Development',
+      icon: '💻',
+      description: 'Custom desktop applications tailored to your business needs, delivering high performance, security, and seamless user experiences across platforms.',
       featured: false
     }
   ]
