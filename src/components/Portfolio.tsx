@@ -3,6 +3,9 @@ import './Portfolio.css'
 import restauranatImg from '../assets/portfolio/hungrypuppet.PNG'
 import outsourceImg from '../assets/portfolio/talentphere.PNG'
 import vehicleRentingImg from '../assets/portfolio/southroadtrips.PNG'
+import organicquestImg from '../assets/portfolio/organic-quest.PNG'
+import dishupImg from '../assets/portfolio/dishup.PNG'
+import focusfarmImg from '../assets/portfolio/focusfarm.PNG'
 
 const Portfolio: React.FC = () => {
   const portfolioItems = [
@@ -26,21 +29,21 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 4,
-      title: 'Learning Management System',
-      description: 'Interactive online education platform',
-      image: restauranatImg
+      title: '  Organic Quest – Online Education Platform',
+      description: 'A comprehensive and engaging online education solution designed to make learning interactive, structured, and effective',
+      image: organicquestImg
     },
     {
       id: 5,
-      title: 'Project Management Tool',
-      description: 'Collaborative workspace for team productivity',
-      image: restauranatImg
+      title: 'Dishup – Smart Restaurant Menu Scan App',
+      description: 'Comprehensive digital menu scanning and contactless ordering solution',
+      image: dishupImg
     },
     {
       id: 6,
-      title: 'Restaurant POS System',
-      description: 'Complete point-of-sale solution for restaurants',
-      image: restauranatImg
+      title: 'Focusfarm – Personal Goal Focusing App',
+      description: 'A smart and motivating solution to set goals, stay focused, and track personal progress efficiently',
+      image: focusfarmImg
     }
     
   ]
