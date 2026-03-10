@@ -1,46 +1,18 @@
-import { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header.tsx'
-import About from './components/About.tsx'
-import ProductLifecycle from './components/ProductLifecycle.tsx'
-import Services from './components/Services.tsx'
-import Portfolio from './components/Portfolio.tsx'
-import Testimonials from './components/Testimonials.tsx'
-import Contact from './components/Contact.tsx'
-import Footer from './components/Footer.tsx'
+import Home from './pages/Home'
+import ProjectDetails from './pages/ProjectDetails'
 
 function App() {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible')
-        }
-      })
-    }, observerOptions)
-
-    const animatedElements = document.querySelectorAll('.fade-in')
-    animatedElements.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <div className="App">
-      <Header />
-      <About />
-      <ProductLifecycle />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:id" element={<ProjectDetails />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

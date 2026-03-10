@@ -96,3 +96,13 @@
     padding: var(--spacing-lg);
   }
 }
+
+.btn-view-case {
+  color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+
+.btn-view-case:hover {
+  background-color: var(--white) !important;
+  color: var(--primary-black) !important;
+}
