@@ -3,6 +3,43 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Floating radial glow orbs – Cluely-style atmospheric background */
+.App::before,
+.App::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+}
+
+/* Top-right soft glow */
+.App::before {
+  width: 800px;
+  height: 800px;
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(195, 205, 230, 0.35) 0%, rgba(210, 218, 235, 0.12) 50%, transparent 70%);
+}
+
+/* Bottom-left soft glow */
+.App::after {
+  width: 900px;
+  height: 900px;
+  bottom: 5%;
+  left: -250px;
+  background: radial-gradient(circle, rgba(185, 198, 225, 0.3) 0%, rgba(200, 210, 230, 0.1) 50%, transparent 70%);
+}
+
+/* Ensure page content sits above glow orbs */
+.App>* {
+  position: relative;
+  z-index: 1;
 }
 
 /* Ensure smooth scrolling and proper spacing */
@@ -11,10 +48,21 @@ section {
 }
 
 /* Animation delays for staggered fade-in effects */
-.fade-in:nth-child(1) { animation-delay: 0.1s; }
-.fade-in:nth-child(2) { animation-delay: 0.2s; }
-.fade-in:nth-child(3) { animation-delay: 0.3s; }
-.fade-in:nth-child(4) { animation-delay: 0.4s; }
+.fade-in:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.fade-in:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.fade-in:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
