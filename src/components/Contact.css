@@ -174,15 +174,15 @@
   .contact-grid {
     gap: var(--spacing-3xl);
   }
-  
+
   .contact-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .contact-info {
     padding: var(--spacing-lg);
   }
-  
+
   .contact-form-container {
     padding: var(--spacing-2xl);
   }
@@ -194,44 +194,76 @@
     gap: var(--spacing-2xl);
     min-height: auto;
   }
-  
+
   .contact-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .contact-description {
     font-size: var(--font-size-base);
   }
-  
+
   .contact-info {
     padding: 0;
     order: 2;
   }
-  
+
   .contact-form-container {
     padding: var(--spacing-xl);
     order: 1;
   }
-  
+
   .contact-details {
     gap: var(--spacing-lg);
   }
-  
+
   .contact-item {
     gap: var(--spacing-md);
   }
-  
+
   .contact-icon {
     font-size: 1.5rem;
   }
-  
+
   .form-input,
   .form-textarea {
     padding: var(--spacing-md);
   }
-  
+
   .contact-submit {
     padding: var(--spacing-md) var(--spacing-xl);
     font-size: var(--font-size-sm);
   }
+}
+
+/* Contact link styles */
+.contact-link {
+  text-decoration: none;
+  color: var(--primary-black);
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--gray-text);
+  text-decoration: underline;
+}
+
+/* WhatsApp icon colour */
+.contact-icon-whatsapp {
+  color: #25D366;
+}
+
+/* WhatsApp link accent */
+.contact-whatsapp-link {
+  color: #128C7E;
+}
+
+.contact-whatsapp-link:hover {
+  color: #25D366;
+}
+
+/* Stack multiple numbers on separate lines */
+.contact-number {
+  display: block;
+  margin-top: 4px;
 }
