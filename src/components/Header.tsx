@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
+import worldImg from '../assets/world.png'
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -28,6 +29,11 @@ const Header: React.FC = () => {
 
   return (
     <header id="home" className="header-section">
+      <div
+        className="header-world"
+        style={{ backgroundImage: `url(${worldImg})` }}
+        aria-hidden="true"
+      ></div>
       {/* Navigation Bar */}
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-container">
