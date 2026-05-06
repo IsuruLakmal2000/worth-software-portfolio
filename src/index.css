@@ -1,4 +1,6 @@
 @import './variables.css';
+@import './styles/theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -19,7 +21,7 @@ body {
   font-family: var(--font-primary);
   line-height: 1.6;
   color: var(--primary-black);
-  background: linear-gradient(180deg, #e4e7f0 0%, #eef0f5 20%, #f5f6f9 45%, #fafbfc 70%, #ffffff 100%);
+  background: var(--theme-bg);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,8 +38,8 @@ body::before {
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.55;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  background-image: radial-gradient(circle at 12% 14%, rgba(0, 0, 0, 0.06), transparent 28%), radial-gradient(circle at 86% 10%, rgba(0, 0, 0, 0.045), transparent 35%);
 }
 
 /* Ensure all content sits above the noise layer */

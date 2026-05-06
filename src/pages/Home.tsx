@@ -23,7 +23,7 @@ const Home: React.FC = () => {
             })
         }, observerOptions)
 
-        const animatedElements = document.querySelectorAll('.fade-in')
+        const animatedElements = document.querySelectorAll('.fade-in, .fade-rise, .fade-rise-delay, .fade-rise-delay-2')
         animatedElements.forEach((el) => observer.observe(el))
 
         return () => observer.disconnect()

@@ -5,18 +5,18 @@ import { projects } from '../data/projects'
 
 const Portfolio: React.FC = () => {
   return (
-    <section id="portfolio" className="section">
+    <section id="portfolio" className="section section-shell">
       <div className="container">
-        <div className="portfolio-header fade-in text-center">
+        <div className="portfolio-header fade-rise text-center">
           <h2 className="heading-secondary">Our Work</h2>
           <p className="portfolio-subtitle">
             Explore our portfolio of successful projects and see how we've helped businesses achieve their goals
           </p>
         </div>
 
-        <div className="portfolio-grid fade-in">
-          {projects.map((item) => (
-            <div key={item.id} className="portfolio-item">
+        <div className="portfolio-grid">
+          {projects.map((item, index) => (
+            <div key={item.id} className={`portfolio-item ${index % 3 === 0 ? 'fade-rise' : index % 3 === 1 ? 'fade-rise-delay' : 'fade-rise-delay-2'}`}>
               <div className="portfolio-image">
                 <img src={item.image} alt={item.title} />
                 <div className="portfolio-overlay">

@@ -61,7 +61,7 @@ const ProjectDetails: React.FC = () => {
             {/* Main Content - Narrative Description */}
             <section className="project-content-section">
                 <div className="container">
-                    <div className="project-content-block fade-in visible">
+                    <div className="project-content-block fade-rise visible">
                         <p className="project-narrative">{project.detailedDescription}</p>
                     </div>
                 </div>

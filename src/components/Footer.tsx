@@ -19,11 +19,11 @@ const Footer: React.FC = () => {
             <h4 className="footer-heading">Connect With Us</h4>
             <div className="social-links">
               <a href="#" className="social-link" aria-label="LinkedIn">
-                <span className="social-icon">💼</span>
+                <span className="social-icon"></span>
                 LinkedIn
               </a>
               <a href="#" className="social-link" aria-label="Twitter">
-                <span className="social-icon">🐦</span>
+                <span className="social-icon"></span>
                 Twitter
               </a>
             </div>

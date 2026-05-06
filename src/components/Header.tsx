@@ -72,13 +72,13 @@ const Header: React.FC = () => {
       {/* Hero Content */}
       <div className="hero-content">
         <div className="container">
-          <div className="hero-inner fade-in">
+          <div className="hero-inner fade-rise visible">
             <div className="hero-text-content">
-              <p className="hero-subtitle">Welcome to WorthSoftware</p>
+              <p className="hero-subtitle fade-rise-delay visible">Welcome to WorthSoftware</p>
               <h1 className="hero-main-title">
                 Building <span className="highlight">innovative solutions</span> for your business
               </h1>
-              <p className="hero-description">
+              <p className="hero-description fade-rise-delay-2 visible">
                 We create cutting-edge software solutions that drive growth and transform your digital presence.
               </p>
               <div className="hero-actions">

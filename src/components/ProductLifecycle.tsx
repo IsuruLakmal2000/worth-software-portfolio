@@ -88,9 +88,9 @@ const ProductLifecycle: React.FC<ProductLifecycleProps> = () => {
   ];
 
   return (
-    <section className="section product-lifecycle" id="product-lifecycle">
+    <section className="section section-shell product-lifecycle" id="product-lifecycle">
       <div className="container">
-        <div className="lifecycle-header">
+        <div className="lifecycle-header fade-rise">
           <h2 className="section-title">Crafted by Talent, Perfected in Services</h2>
           <p className="section-subtitle">
             Guiding Your Product from Vision to Victory. At WorthSoftware, every product's journey is shaped by expertise, innovation, and a deep understanding of your goals.
@@ -100,7 +100,7 @@ const ProductLifecycle: React.FC<ProductLifecycleProps> = () => {
         <div className="lifecycle-infographic">
           <div className="lifecycle-timeline">
             {stages.map((stage, index) => (
-              <div key={index} className="timeline-item">
+              <div key={index} className={`timeline-item ${index % 3 === 0 ? 'fade-rise' : index % 3 === 1 ? 'fade-rise-delay' : 'fade-rise-delay-2'}`}>
                 <div className="timeline-marker">
                   <span className="marker-number">{stage.number}</span>
                 </div>
@@ -120,7 +120,7 @@ const ProductLifecycle: React.FC<ProductLifecycleProps> = () => {
 
         <div className="lifecycle-stats">
           {stats.map((stat, index) => (
-            <div key={index} className="stat-item">
+            <div key={index} className={`stat-item ${index % 3 === 0 ? 'fade-rise' : index % 3 === 1 ? 'fade-rise-delay' : 'fade-rise-delay-2'}`}>
               <div className="stat-number">{stat.number}</div>
               <div className="stat-label">{stat.label}</div>
             </div>
